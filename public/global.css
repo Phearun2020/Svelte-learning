@@ -61,3 +61,22 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+/* extra styles */
+body {
+	color: #777;
+	background: #ffff;
+	padding: 0;
+	margin: 0;
+
+}
+h4{
+	color: blue;
+
+}
+button{
+	background: wheat;
+}
+.backDrop{
+	color: yellowgreen;
+}

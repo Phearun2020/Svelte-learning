@@ -1,4 +1,6 @@
 <script>
+	import Modal from './Modal.svelte';
+
 	let students = [
 		{name: 'Dara', beltColour: 'yellow', age: '21', score: 89, id: 1},
 		{name: 'Thara', beltColour: 'blue', age: '22', score: 35, id: 2},
@@ -14,6 +16,8 @@
 	}
 	let num = 50;
 </script>
+
+<Modal />
 
 <main>
 	
