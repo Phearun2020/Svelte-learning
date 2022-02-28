@@ -22,12 +22,24 @@
 	let num = 50;
 </script>
 
-<Modal message ="hey, I am prop value" {showModal} on:click={toggleModal} />
+<Modal  {showModal} on:click={toggleModal}> 
+ <!-- <h3>Add a new student</h3> -->
+ <form>
+	 <input type="text" placeholder="name">
+	 <input type="text" placeholder="belt colour">
+	 <input type="text" placeholder="age">
+	 <input type="text" placeholder="score">
+	 <button>Add new student</button>
+ </form>
+ <div slot="title">
+	 <h3>Add new student</h3>
+</div>
+</Modal>
 
 <main>
-	<!-- <button on:click={toggleModal}>Sign in</button> -->
+	<button on:click={toggleModal}>Sign in</button>
 	<!-- clicked only one -->
-	<button on:click|once={toggleModal}>Sign in</button> 
+	<!-- <button on:click|once={toggleModal}>Sign in</button>  -->
 	{#each students as person (person.id)}
 		
 		<div>

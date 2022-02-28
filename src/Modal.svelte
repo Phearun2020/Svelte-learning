@@ -3,7 +3,7 @@
     // preventDefault- prevent the default action (run e.preventDefault())
     //self - only fires the event if the clicked element is the target
 
-    export let message = 'default value';
+    
     export let showModal = true;
     export let isPromo = false;
 </script>
@@ -12,7 +12,8 @@
 <!-- use self for click out size box to cancel -->
     <div class="backDrop" class:promo={isPromo} on:click|self>
         <div class="modal">
-            <p>{message}</p>
+            <slot></slot>
+            <slot name="title"></slot>
 
         </div>
 
