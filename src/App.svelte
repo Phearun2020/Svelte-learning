@@ -1,12 +1,17 @@
 <script>
 	import Modal from './Modal.svelte';
 
+	let showModal = false;
+
 	let students = [
 		{name: 'Dara', beltColour: 'yellow', age: '21', score: 89, id: 1},
 		{name: 'Thara', beltColour: 'blue', age: '22', score: 35, id: 2},
 		{name: 'Both', beltColour: 'black', age: '23', score: 50, id: 3},
 		{name: 'Ramos', beltColour: 'green', age: '21', score: 45, id: 4},
 	];
+	const toggleModal = () =>{
+		showModal = !showModal;
+	}
 
 	const handleClick = (id) =>{
 		// delete the person from students
@@ -17,10 +22,10 @@
 	let num = 50;
 </script>
 
-<Modal message ="hey, I am prop value" isPromo={true}/>
+<Modal message ="hey, I am prop value" {showModal} on:click={toggleModal} />
 
 <main>
-	
+	<button on:click={toggleModal}>Sign in</button>
 	{#each students as person (person.id)}
 		
 		<div>
