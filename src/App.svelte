@@ -25,7 +25,9 @@
 <Modal message ="hey, I am prop value" {showModal} on:click={toggleModal} />
 
 <main>
-	<button on:click={toggleModal}>Sign in</button>
+	<!-- <button on:click={toggleModal}>Sign in</button> -->
+	<!-- clicked only one -->
+	<button on:click|once={toggleModal}>Sign in</button> 
 	{#each students as person (person.id)}
 		
 		<div>
