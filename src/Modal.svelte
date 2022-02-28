@@ -13,8 +13,7 @@
     <div class="backDrop" class:promo={isPromo} on:click|self>
         <div class="modal">
             <slot></slot>
-            <slot name="title"></slot>
-
+            <!-- <slot name="title"></slot> -->
         </div>
 
     </div>

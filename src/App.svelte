@@ -1,5 +1,6 @@
 <script>
 	import Modal from './Modal.svelte';
+	import AddStudentForm from './AddStudentForm.svelte'
 
 	let showModal = false;
 
@@ -23,17 +24,7 @@
 </script>
 
 <Modal  {showModal} on:click={toggleModal}> 
- <!-- <h3>Add a new student</h3> -->
- <form>
-	 <input type="text" placeholder="name">
-	 <input type="text" placeholder="belt colour">
-	 <input type="text" placeholder="age">
-	 <input type="text" placeholder="score">
-	 <button>Add new student</button>
- </form>
- <div slot="title">
-	 <h3>Add new student</h3>
-</div>
+ <AddStudentForm />
 </Modal>
 
 <main>
