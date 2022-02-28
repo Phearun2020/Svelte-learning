@@ -17,7 +17,7 @@
 	let num = 50;
 </script>
 
-<Modal />
+<Modal message ="hey, I am prop value" isPromo={true}/>
 
 <main>
 	
