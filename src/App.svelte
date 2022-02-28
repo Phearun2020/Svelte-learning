@@ -1,29 +1,22 @@
 <script>
-	let firstName = 'OL';
-	let lastName = 'Phearun'
-	let beltColour = 'blue';
-
-	$: fullName = `${firstName} ${lastName}`;
-	// $: console.log(beltColour);
-	$: {
-		console.log(beltColour);
-		console.log(fullName);
-	}
-	const handleClick =()=>{
-		beltColour = 'red';
-		
-	};
-	const handleInput = (e) =>{
-		beltColour = e.target.value;
-	}
+	let students = [
+		// {name: 'Dara', beltColour: 'yellow', age: '21', id: 1},
+		// {name: 'Thara', beltColour: 'blue', age: '22', id: 2},
+		// {name: 'Both', beltColour: 'black', age: '23', id: 3},
+		// {name: 'Ramos', beltColour: 'green', age: '21', id: 4},
+	];
 </script>
 
 <main>
-	<p style="color: {beltColour}">Hello, {fullName}, your favorite color is {beltColour}</p>
-	<button on:click={handleClick}>Cancel</button>
-	<input type="text" bind:value={firstName}>
-	<input type="text" bind:value={lastName}>
-	<input type="text" bind:value={beltColour}>
+	{#each students as person (person.id)}
+		<div>
+			<h4>id {person.id} {person.name}</h4>
+			<p>{person.age} year old, {person.beltColour} belt.</p>
+		</div>
+		{:else}
+			<p>There are no students to show ...</p>
+		
+	{/each}
 </main>
 
 <style>
